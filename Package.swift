@@ -7,9 +7,9 @@ let package = Package(
     name: "SPMExample",
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
-        .library(
-            name: "SPMExample",
-            targets: ["SPMExample"]),
+        .library(name: "SPMExample", targets: ["SPMExample"]),
+        .library(name: "SPMExampleStatic", type: .static, targets: ["SPMExample"]),
+        .library(name: "SPMExampleDynamic", type: .dynamic, targets: ["SPMExample"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
